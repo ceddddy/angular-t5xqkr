@@ -6,7 +6,8 @@
 <div *ngFor="let product of products">
   <!-- Angular's interpolation syntax {{ valueAsText }} lets you render the property value as text -->
   <h3>
-    <a [title]="product.name + ' details' ">
+    <a [title]="product.name + ' details' "
+      [routerLink]="['/products', product.id]">
       {{ product.name }}
     </a>
   </h3>  
